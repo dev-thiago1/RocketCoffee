@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+
+:root {
+  --backgrond: #000;
+  --text-color: #fff;
+  --button: #8257e5;
+  --border: #29292e;
+  --border-menu-mobile: #a8a8b3;
+  --text-color-menu-mobile: #e1e1e6;
+  font-family: "Manrope", sans-serif;
+}
+.bg-main {
+  background-image: url(/assets/Desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobile-button {
+  display: none;
+}
+.logo-mobile {
+  display: none;
+}
+.header-nav {
+  max-width: 918px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+.header-nav .list-nav {
+  display: flex;
+  gap: 34px;
+}
+.header-nav .list-nav li {
+  font-size: 14px;
+  color: white;
+}
+.header-nav .header-button a {
+  padding: 10px 30px 10px 30px;
+  border: 1px solid #8257e5;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: white;
+  font-size: 11px;
+}
+.section-1 .container {
+  text-align: center;
+}
+.section-1 .container h1 {
+  color: white;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 110px;
+}
+.section-1 .container .purple-title {
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+    -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+  color: black;
+}
+
+.title-mobile {
+  display: none;
+}
+
+.section-image {
+  display: none;
+}
+.section-desktop-image {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+.section-desktop-image img {
+  height: 420px;
+}
+
+.activeMenu {
+  visibility: visible !important;
+  height: calc(100vh - 134px);
+}
+@media (max-width: 768px) {
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 90px;
+  }
+
+  .section-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-image {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+  }
+  .section-1 .container h1 {
+    line-height: 50px;
+    font-size: 2.5rem;
+  }
+
+  .list-nav {
+    visibility: hidden;
+    background-color: #000000;
+    right: 0;
+    top: 134px;
+    position: absolute;
+    width: 100%;
+    z-index: 99999;
+    gap: 0 !important;
+    display: block !important;
+  }
+  .header-nav .list-nav li:hover {
+    border-left: solid 3px #8257e5;
+    color: white;
+  }
+  .header-nav .list-nav li {
+    color: #a8a8b3;
+    font-size: 18px;
+    padding: 15px 0px 15px 15px;
+    border: #29292e 1px solid;
+  }
+  .title-mobile {
+    display: block;
+    color: white;
+    width: 300px;
+  }
+
+  .title-mobile h3 {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  .header-button {
+    display: none;
+  }
+
+  .content-button-home {
+    width: 100%;
+    margin: 90px 0;
+  }
+
+  .content-button-home a {
+    padding: 10px 30px 10px 30px;
+    border: 1px solid #8257e5;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: white;
+    font-size: 11px;
+  }
+  .header {
+    border-bottom: 1px solid var(--border);
+  }
+  .logo-desktop {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+  }
+  .section-desktop-image {
+    display: none;
+  }
+  .mobile-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .menu-close {
+    display: none !important;
+  }
+}
